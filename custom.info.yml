@@ -1,0 +1,6 @@
+name: Custom Module
+type: module
+description: Shows sample text
+package: Custom
+core: 8.x
+

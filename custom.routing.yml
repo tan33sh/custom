@@ -1,0 +1,6 @@
+custom:
+    path: /custom
+    defaults: 
+      _controller: Drupal\custom\Controller\CustomController::text
+    requirements: 
+      _permission: 'access content'
