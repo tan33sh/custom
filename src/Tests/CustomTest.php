@@ -26,14 +26,16 @@ class CustomTest extends WebTestBase {
 	/**
    * Tests that 'custom' returns a 200.
    */
+	
 	public function testCustomRouterURLIsAccessible() {
 		$this->drupalGet('custom');
 		$this->assertResponse(200, 'User is able to access the URL');
 	}
 
-	  /**
+	/**
    * Tests that the form has some text.
    */
+
 	public function testCustomText(){
 		$this->drupalGet('custom');
 		$this->assertText('Functional testing of this module.', 'Message is shown');
