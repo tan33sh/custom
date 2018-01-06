@@ -1,22 +1,40 @@
 <?php
 
+/**
+ * @file
+ * Contains \Drupal\custom\Tests\CustomTest.
+ */
+
 namespace Drupal\custom\Tests;
 
 use Drupal\simpletest\WebTestBase;
 
+/**
+ * Provide some basic tests for our custom module.
+ * @group custom
+ */
+
 class CustomTest extends WebTestBase {
 
-	// Modules to Install
+	/**
+   * Modules to install.
+   * @var array
+   */
+
 	public static $modules = ['custom', 'node'];
 
-	// Tests if 'custom' returns a 200.
+	/**
+   * Tests that 'custom' returns a 200.
+   */
 	public function testCustomRouterURLIsAccessible() {
 		$this->drupalGet('custom');
 		$this->assertResponse(200, 'User is able to access the URL');
 	}
 
-	// Tests if there is text present on the page.
-	public function testCustomText{
+	  /**
+   * Tests that the form has some text.
+   */
+	public function testCustomText(){
 		$this->drupalGet('custom');
 		$this->assertText('Functional testing of this module.', 'Message is shown');
 	}
